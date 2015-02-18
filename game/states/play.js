@@ -26,10 +26,13 @@
 
 
 
-      board.position.setTo(this.game.width, 100);
-      board.build([[1, 1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1]]);
+      board.position.setTo(0, -500);
+      board.build([[null, 1, 1, 1, 1, 1], 
+                   [1, 1, 1, 1, 1, null], 
+                   [1, 1, 1, 1, null, null], 
+                   [1, 1, 1, null, null, null]]);
 
-      this.game.add.tween(board).to({x: (this.game.width-board.width)/2, y: 10}, 1000, Phaser.Easing.Bounce.Out, true);
+      this.game.add.tween(board).to({x: (this.game.width-board.width)/2, y: 12}, 1000, Phaser.Easing.Bounce.Out, true);
       this.game.add.existing(board);
     },
     update: function() {
