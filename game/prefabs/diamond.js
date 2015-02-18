@@ -1,7 +1,9 @@
 'use strict';
+var images = ['blue-d.png', 'green-d.png', 'orange-d.png', 'purple-d.png', 'red-d.png', 'yellow-d.png'];
+
 
 var Diamond = function(game, x, y, frame) {
-  Phaser.Sprite.call(this, game, x, y, 'diamond' + Math.floor(6*Math.random()), frame);
+  Phaser.Sprite.call(this, game, x, y, 'images', images[frame]);
 
   // initialize your prefab here
 

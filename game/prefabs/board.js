@@ -1,12 +1,10 @@
 'use strict';
+var DiamondGroup = require('./diamond-group');
+
 
 var Board = function(game) {
   Phaser.Group.call(this, game);
 
-  // initialize your prefab here
-  this.bmData = null;
-  
-  
 };
 
 Board.prototype = Object.create(Phaser.Group.prototype);
@@ -83,6 +81,7 @@ Board.prototype.build = function(matrix) {
       }
     }
   }
+  this.add(new DiamondGroup(this.game, matrix));
 };
 
 

@@ -22,18 +22,22 @@
 
       //this.game.add.existing(new Diamond(this.game, 200, 200));
       var board = new Board(this.game);
-      
+      //Math.floor(images.length*Math.random())
 
-
-
-      board.position.setTo(0, -500);
-      board.build([[null, 1, 1, 1, 1, 1], 
+      var matrix = [[null, 1, 1, 1, 1, 1], 
                    [1, 1, 1, 1, 1, null], 
                    [1, 1, 1, 1, null, null], 
-                   [1, 1, 1, null, null, null]]);
+                   [1, 1, 1, null, null, null]]; 
+
+      board.position.setTo(0, -500);
+      board.build(matrix);
 
       this.game.add.tween(board).to({x: (this.game.width-board.width)/2, y: 12}, 1000, Phaser.Easing.Bounce.Out, true);
       this.game.add.existing(board);
+
+
+
+
     },
     update: function() {
 
