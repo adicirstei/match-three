@@ -1,0 +1,124 @@
+{"frames": [
+
+{
+	"filename": "blue-d.png",
+	"frame": {"x":247,"y":2,"w":44,"h":41},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":3,"y":4,"w":44,"h":41},
+	"sourceSize": {"w":50,"h":50}
+},
+{
+	"filename": "border-v.png",
+	"frame": {"x":106,"y":2,"w":5,"h":50},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":5,"h":50},
+	"sourceSize": {"w":5,"h":50}
+},
+{
+	"filename": "border.png",
+	"frame": {"x":201,"y":46,"w":50,"h":5},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":5},
+	"sourceSize": {"w":50,"h":5}
+},
+{
+	"filename": "corner-bl.png",
+	"frame": {"x":253,"y":45,"w":5,"h":5},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":5,"h":5},
+	"sourceSize": {"w":5,"h":5}
+},
+{
+	"filename": "corner-br.png",
+	"frame": {"x":260,"y":45,"w":5,"h":5},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":5,"h":5},
+	"sourceSize": {"w":5,"h":5}
+},
+{
+	"filename": "corner-tl.png",
+	"frame": {"x":267,"y":45,"w":5,"h":5},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":5,"h":5},
+	"sourceSize": {"w":5,"h":5}
+},
+{
+	"filename": "corner-tr.png",
+	"frame": {"x":274,"y":45,"w":5,"h":5},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":5,"h":5},
+	"sourceSize": {"w":5,"h":5}
+},
+{
+	"filename": "green-d.png",
+	"frame": {"x":113,"y":2,"w":46,"h":48},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":1,"w":46,"h":48},
+	"sourceSize": {"w":50,"h":50}
+},
+{
+	"filename": "orange-d.png",
+	"frame": {"x":201,"y":2,"w":44,"h":42},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":3,"y":4,"w":44,"h":42},
+	"sourceSize": {"w":50,"h":50}
+},
+{
+	"filename": "purple-d.png",
+	"frame": {"x":339,"y":2,"w":44,"h":36},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":3,"y":7,"w":44,"h":36},
+	"sourceSize": {"w":50,"h":50}
+},
+{
+	"filename": "red-d.png",
+	"frame": {"x":161,"y":2,"w":38,"h":46},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":6,"y":2,"w":38,"h":46},
+	"sourceSize": {"w":50,"h":50}
+},
+{
+	"filename": "tile-dark.png",
+	"frame": {"x":2,"y":2,"w":50,"h":50},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":50},
+	"sourceSize": {"w":50,"h":50}
+},
+{
+	"filename": "tile-light.png",
+	"frame": {"x":54,"y":2,"w":50,"h":50},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":50},
+	"sourceSize": {"w":50,"h":50}
+},
+{
+	"filename": "yellow-d.png",
+	"frame": {"x":293,"y":2,"w":44,"h":40},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":3,"y":5,"w":44,"h":40},
+	"sourceSize": {"w":50,"h":50}
+}],
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "atlas.png",
+	"format": "RGBA8888",
+	"size": {"w":385,"h":54},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:5630f4e20902931ac5d0a5128f66a679:7b2be1596e26e273fcb0475b0fd27107:cbce6b53f0f49e0bf15173c25c41f876$"
+}
+}
