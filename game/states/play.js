@@ -24,10 +24,11 @@
       var board = new Board(this.game);
       //Math.floor(images.length*Math.random())
 
-      var matrix = [[null, 1, 1, 1, 1, 1], 
-                   [1, 1, 1, 1, 1, null], 
-                   [1, 1, 1, 1, null, null], 
-                   [1, 1, 1, null, null, null]]; 
+      var matrix = [["r", "r", "r", "r", "r", "r"],
+                    ["r", "r", "r", "r", "r", "r"],
+                    ["r", "r", "r", "r", "r", "r"],
+                    ["r", "r", "r", "r", "r", "r"],
+                    ["r", "r", "r", "r", "r", "r"]];
 
       board.position.setTo(0, -500);
       board.build(matrix);
