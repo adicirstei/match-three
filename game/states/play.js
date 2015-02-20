@@ -36,9 +36,6 @@
       this.game.add.tween(board).to({x: (this.game.width-board.width)/2, y: 12}, 1000, Phaser.Easing.Bounce.Out, true);
       this.game.add.existing(board);
 
-
-
-
     },
     update: function() {
 

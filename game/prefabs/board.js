@@ -11,9 +11,9 @@ Board.prototype = Object.create(Phaser.Group.prototype);
 Board.prototype.constructor = Board;
 
 Board.prototype.update = function() {
-  
+
   // write your prefab's specific update code here
-  
+
 };
 
 Board.prototype.build = function(matrix) {
@@ -34,11 +34,11 @@ Board.prototype.build = function(matrix) {
       bb = matrix[j][i] && ((j+1 === rows) ||(!matrix[j+1][i]));
       lb = matrix[j][i] && ((i === 0) || (!matrix[j][i-1]));
       rb = matrix[j][i] && ((i+1 === cols) || (!matrix[j][i+1]));
-      
+
       if (matrix[j][i]) {
         this.add(this.game.make.image(i * 50, j * 50, 'images', ((i+j)%2 ? 'tile-light.png' : 'tile-dark.png')));
       }
- 
+
       if (tb) {
         tmp = this.game.make.image(i * 50, j * 50, 'images', 'border.png');
         tmp.anchor.setTo(0, 1);
@@ -53,7 +53,7 @@ Board.prototype.build = function(matrix) {
         tmp = this.game.make.image(i * 50, j * 50, 'images', 'border-v.png');
         tmp.anchor.setTo(1, 0);
         this.add(tmp);
-      }      
+      }
       if (rb) {
         tmp = this.game.make.image((i+1) * 50, j * 50, 'images', 'border-v.png');
         tmp.anchor.setTo(0, 0);
@@ -81,7 +81,7 @@ Board.prototype.build = function(matrix) {
       }
     }
   }
-  this.add(new DiamondGroup(this.game, matrix));
+  this.add(new DiamondGroup(this.game, matrix)).human();
 };
 
 

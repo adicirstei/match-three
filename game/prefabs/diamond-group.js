@@ -7,7 +7,7 @@ var DiamondGroup = function(game, matrix) {
 
   // initialize your prefab here
   this.matrix = matrix;
-
+  var s;
 
   var rows = this.rows = (matrix && matrix.length) || 0;
   var cols = this.cols = (rows && matrix[0].length) || 0;
@@ -18,10 +18,14 @@ var DiamondGroup = function(game, matrix) {
   for (var j = 0; j<rows; j++) {
     for (var i = 0; i<cols; i++) {
       if (typeof this.boardMatrix[j][i] === 'number') {
-        this.add(new Diamond(this.game, i*50, j*50, this.boardMatrix[j][i]));
+        s = this.add(new Diamond(this.game, i*50, j*50, this.boardMatrix[j][i]));
+        s.boardPos = {i: i, j: j};
+        s.neighbours = {h: 1, v: 1};
+        this.boardMatrix[j][i] = s;
       }
     }
   }
+
 };
 
 DiamondGroup.prototype = Object.create(Phaser.Group.prototype);
@@ -31,6 +35,8 @@ DiamondGroup.prototype.update = function() {
   // write your prefab's specific update code here
 
 };
+
+
 DiamondGroup.prototype.generateBoard = function() {
   var type;
 
@@ -77,5 +83,46 @@ DiamondGroup.prototype.getType = function(i, j) {
 
   return s
 }
+
+DiamondGroup.prototype.human = function() {
+  this.game.input.onDown.add(this.startDrag, this);
+  this.game.input.onUp.add(this.endDrag, this);
+};
+
+DiamondGroup.prototype.computer = function() {
+  this.game.input.onDown.remove(this.startDrag, this);
+  this.game.input.onUp.remove(this.endDrag, this);
+
+
+};
+
+DiamondGroup.prototype.startDrag = function(pointer) {
+
+  this.dragCell = {
+    i: Math.floor((pointer.x - this.parent.x)/50),
+    j: Math.floor((pointer.y-this.parent.y)/50)
+  };
+  //this.boardMatrix[this.dragCell.j][this.dragCell.i].kill();
+};
+DiamondGroup.prototype.endDrag = function(pointer) {
+  var target = {
+    i: Math.floor((pointer.x - this.parent.x)/50),
+    j: Math.floor((pointer.y-this.parent.y)/50)
+  };
+  var dir;
+
+  if (this.dragCell) {
+     if (this.dragCell.i === target.i && target.j > this.dragCell.j) {
+       dir = 'down';
+       //this.swap(dir);
+     }
+
+
+
+    this.dragCell = null;
+  } else {
+    return;
+  }
+};
 
 module.exports = DiamondGroup;
